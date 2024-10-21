@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,600;1,600&display=swap');
 
-:root{
+:root {
     --cor-primaria: #45474B;
     --cor-secundaria: #F5F7F8;
     --cor-terciaria: #427D9D;
     --cor-hover: #31363F;
 
     --fonte-primaria: "Krona One", sans-serif;
-    --fonte-secundaria:  "Montserrat", sans-serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
 }
 
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
 }
 
@@ -21,25 +21,28 @@ body {
     color: var(--cor-secundaria);
 }
 
-.cabecalho{
-    padding: 2%  0% 0% 15% ;
+.cabecalho {
+    padding: 2% 0; /* Ajuste o padding conforme necessário */
+    display: flex; /* Adicione esta linha */
+    justify-content: center; /* Adicione esta linha para centralizar horizontalmente */
 }
 
 .cabecalho__menu {
     display: flex;
     gap: 80px;
+    text-align: center;
 }
 
-.cabecalho__menu__link{
+.cabecalho__menu__link {
     font-family: var(--fonte-secundaria);
     font-size: 24px;
     font-weight: 600; 
     color: var(--cor-terciaria);
     text-decoration: none;
-
 }
 
-.cabecalho__menu__link:hover{
+
+.cabecalho__menu__link:hover {
     color: var(--cor-hover);
     transition: 0.5s;
 }
@@ -76,7 +79,6 @@ body {
 .apresentacao__conteudo__paragrafo {
     font-size: 23px;
     font-family: var(--fonte-secundaria);
-    
 }
 
 .apresentacao__links {
@@ -84,7 +86,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 32px
+    gap: 32px;
 }
 
 .aprensentacao__links__subtitulo {
@@ -103,7 +105,7 @@ body {
     padding: 21.5px 0;
     text-align: center;
     font-size: 25px;
-    font-weight: 600px;
+    font-weight: 600;
     text-decoration: none;
     color: var(--cor-secundaria);
     font-family: var(--fonte-secundaria);
@@ -115,7 +117,7 @@ body {
     margin-left: 24px;
 }
 
-.rodape{
+.rodape {
     padding: 24px;
     background-color: var(--cor-terciaria);
     color: var(--cor-primaria);
@@ -123,4 +125,62 @@ body {
     font-family: var(--fonte-secundaria);
     font-size: 24px;
     font-weight: 400;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cabecalho {
+        padding: 10px; /* Diminui o padding para telas menores */
+    }
+
+    .apresentacao {
+        padding: 5% 5%; /* Diminui o padding lateral */
+        flex-direction: column; /* Altera para coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .imagem-portifolio {
+        width: 90%; /* Ajusta a largura da imagem para 90% */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+    .apresentacao__conteudo {
+        width: 100%; /* Aumenta a largura do conteúdo */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .apresentacao__conteudo__titulo {
+        font-size: 28px; /* Reduz o tamanho da fonte */
+    }
+
+    .apresentacao__conteudo__paragrafo {
+        font-size: 18px; /* Reduz o tamanho da fonte */
+    }
+
+    .apresentacao__links__link {
+        width: 100%; /* Aumenta a largura dos links */
+        font-size: 20px; /* Reduz o tamanho da fonte */
+    }
+
+    .rodape {
+        font-size: 20px; /* Reduz o tamanho da fonte do rodapé */
+    }
+}
+
+@media (max-width: 480px) {
+    .cabecalho__menu__link {
+        font-size: 20px; /* Reduz ainda mais o tamanho da fonte */
+    }
+
+    .apresentacao__conteudo__titulo {
+        font-size: 24px; /* Reduz o tamanho da fonte do título */
+    }
+
+    .apresentacao__conteudo__paragrafo {
+        font-size: 16px; /* Reduz o tamanho da fonte do parágrafo */
+    }
+
+    .apresentacao__links__link {
+        font-size: 18px; /* Reduz o tamanho da fonte dos links */
+    }
 }
